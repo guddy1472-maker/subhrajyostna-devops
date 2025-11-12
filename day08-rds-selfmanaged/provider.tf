@@ -1,12 +1,7 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 provider "aws" {
-  region = "us-west-2" # or your desired region
+  
+}
+provider "aws" {
+  alias  = "replica"
+  region = "ap-south-1"  # Replica Region
 }
