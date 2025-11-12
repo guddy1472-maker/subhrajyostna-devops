@@ -83,15 +83,15 @@ resource "aws_security_group" "webSg" {
 
 # EC2 Instance (Ubuntu)
 resource "aws_instance" "server" {
-  ami                         = "ami-0cae6d6fe6048ca2c" # Ubuntu AMI
-  instance_type               = "t2.micro"
+  ami                         = "ami-0261755bbcb8c4a84" # Ubuntu AMI
+  instance_type               = "t3.micro"
   key_name                    = aws_key_pair.example.key_name
   subnet_id                   = aws_subnet.sub1.id
   vpc_security_group_ids      = [aws_security_group.webSg.id]
   associate_public_ip_address = true
 
   tags = {
-    Name = "Server"
+    Name = "UbuntuServer"
   }
 
 #   connection {
@@ -127,7 +127,7 @@ resource "null_resource" "run_script" {
     }
 
     inline = [
-      "echo 'hello from awsdevopsmulticlod' >> /home/ubuntu/file200"
+      "echo 'hello from awsdevopsmulticloud' >> /home/ubuntu/file200"
     ]
   }
 
