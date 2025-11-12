@@ -8,6 +8,6 @@ resource "aws_instance" "name" {
 }
 
 resource "aws_s3_bucket" "name" {
-    bucket = "my-multi-account-bucket-ranjit-11nov"
+    bucket = "my-multi-account-bucket-sushree-11nov"
     provider = aws.oregon
 }
