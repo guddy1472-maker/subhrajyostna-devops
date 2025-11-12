@@ -1,7 +1,7 @@
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
-  bucket = "pipeline-guardianbucket"
+  bucket = "module-bucket-source-terrafrom3rdnov"
   acl    = "private"
 
   control_object_ownership = true
