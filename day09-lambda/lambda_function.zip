@@ -1,0 +1,9 @@
+def lambda_handler(event, context):
+    # This print statement will appear in CloudWatch Logs
+    print("Lambda function executed successfully! through terraform")
+
+    # Return some response (Optional)
+    return {
+        "statusCode": 200,
+        "message": "Hello from Lambda function! Logging is working ✅"
+    }
