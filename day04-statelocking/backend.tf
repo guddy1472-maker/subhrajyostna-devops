@@ -1,10 +1,9 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-bucket-state-file-storage"
-    key    = "terraform.tfstate"
-    #use_lockfile = true # to use s3 native locking 1.19 version above
+    bucket = "tf-statefile-bucket-29thoct"
+    key    = "day04/terraform.tfstate"
+    #use_lockfile = true # enabling state locking in latest terraform versions
     region = "us-east-1"
-    dynamodb_table = "veera" # any version we can use dynamodb locking 
-    encrypt = true
+    dynamodb_table = "lock-file" # any version we can use dynamodb locking
   }
 }
